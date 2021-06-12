@@ -1,0 +1,9 @@
+# Steps of staging area
+git status
+git add [file_name]
+git commit -m "[descriptive message]"
+or
+git commit -m "[descriptive message]" file_name
+#The last command is supposed to work for committing different comment 
+#to different file
+
