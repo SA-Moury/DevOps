@@ -1,0 +1,19 @@
+For uploading or downloading files, the command syntax
+$scp original_path destination_path
+
+For example:
+From Local to Remote
+$scp /home/sharmin/Desktop/DevOps/stage.txt root@192.168.0.105:/root/Desktop
+
+From Remote to Local (downloading from Remote)
+$scp root@192.168.0.105:/root/Desktop/server_config_cmd.txt /home/Sharmin/Desktop/
+
+In case of folder transfer, the syntax should be
+$scp -r original_path destination_path
+
+$scp -r /home/sharmin/Desktop/DevOps/ root@192.168.0.105:/root/Desktop
+
+
+$scp -r root@192.168.0.105:/root/Desktop/DevOps /home/Sharmin/
+
+
