@@ -1,0 +1,14 @@
+1. Install ssh
+$apt  install openssh-server
+$systemctl enable ssh
+$systemctl restart sshd
+$systemctl status sshd
+
+2. Config ssh server
+$nano /etc/ssh/sshd_config
+	uncomment Port 22
+	write "PermitRootLogin yes"
+
+3. Change hostname
+$nano /etc/hosts
+$nano /etc/hostname
