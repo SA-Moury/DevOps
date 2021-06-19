@@ -1,0 +1,84 @@
+#Docker commands
+
+1. Create image
+$ sudo docker build .
+or
+$ sudo docker image build .
+or
+$ sudo docker build -f Dockerfile .
+or 
+$ sudo docker build -f Dockerfile.dev .
+
+2. Add tag to an image
+$ sudo docker build -t <repositoryORimagename:tag> -f Dockerfile .
+
+3. Create image with tag
+$ sudo docker build -t <repositoryORimagename:tag> .
+
+4. List of images
+$ sudo docker images
+or
+$ sudo docker image ls -a
+
+5. Inspect an image
+$ sudo docker inspect <repositoryORimagename:tag>
+or
+$ sudo docker inspect <Image_ID>
+
+6. Delete an image
+$ sudo docker rmi <ImageID>
+or
+$ sudo docker rmi -f $(sudo docker images -aq)
+
+7. Export image into tar file
+$ sudo docker export --output="filename.tar" <containerID>
+
+8. Import tar file contents
+$ sudo docker import <tar_file_path>
+
+9. Create container
+$ sudo docker run <repositoryORimagename:tag>
+
+10. List of container
+$ sudo docker container ls
+or
+$ sudo docker container ls -a
+or
+$ sudo docker ps
+or
+$ sudo docker ps -a
+
+11. Delete a container
+$ sudo docker rm <containerID>
+or
+$ sudo docker prune <containerID>
+or 
+$ sudo docker container prune
+or
+$ sudo docker rm -f $(sudo docker container ls -aq)
+
+12. Stop or kill a container
+$ sudo docker kill <containerID>
+or
+$ sudo docker stop <containerID>
+
+13. Execute or enter in the bash shell
+$ sudo docker exec -it <containerID> bash
+
+14. Create an image copy of a container
+$ sudo docker commit <containerID> <Docker_Hub_ID/repo>
+
+15. Change name of a container
+$ sudo docker container rename <containerID> <New_Container_Name>
+
+16. Running container in the background
+$ sudo docker run -id <repositoryORimagename:tag>
+
+17. Start container
+$ sudo docker start <containerID>
+
+18. Tag image before sending to dockerhub
+$ sudo docker tag <repositoryORimagename:tag> <Docker_Hub_ID/repo:tag>
+
+19. Push image to docker hub
+$ sudo docker push <Docker_Hub_ID/repo:tag>
