@@ -1,0 +1,44 @@
+#Steps to commit and push a file to github repo
+
+1. Track a file
+$ git add file_name
+or
+$ git add * [for multiple files at once]
+
+1.1 To unstage a file
+$ git rm --cached file_name
+or
+$ git restore --staged file_name
+
+2. To commit a file
+$ git commit -m "message" file_name [for specific file]
+#This is a short commit
+or
+$ git commit
+#This is a long commit
+
+3. Check commit status
+$ git log
+
+5. List of tracked files
+$ git ls-files
+
+6. Check connection b/w remote & local repo
+$ git remove -v
+
+7. Add remote repo
+$ git remote add origin remote_repo_url
+
+8. To push repo from local to remote
+$ git push -u origin master
+
+9. Get files from remote repo
+$ git fetch
+or 
+$ git pull
+
+10. Find branch
+$ git branch
+
+11. Switch branch
+$ git checkout new_branch
