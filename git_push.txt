@@ -24,7 +24,7 @@ $ git log
 $ git ls-files
 
 6. Check connection b/w remote & local repo
-$ git remove -v
+$ git remote -v
 
 7. Add remote repo
 $ git remote add origin remote_repo_url
